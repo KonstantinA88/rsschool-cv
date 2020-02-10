@@ -1,0 +1,36 @@
+h1 {
+    font-family: Arial;
+    font-size: 30px;
+    text-align: center;
+}
+
+body {
+    overflow: scroll;
+    padding-left: 512px;
+    width: 1018px;
+}
+
+li {
+    line-height: 24px;
+    font-size: 14px;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+th {
+    text-align: left;
+    background-color: #bcba9a;
+    height: 1514px;
+    width: 504px;
+}
+
+td {
+    text-align: left;
+    background-color: #bcba9a;
+    height: 1514px;
+    width: 504px;
+}
+
+table {
+    text-align: center;
+}
