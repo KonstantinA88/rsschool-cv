@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="">
 <head>
     <link rel="stylesheet" href="rsschool-cv-html.css" type="text/css">
     <meta charset="UTF-8">
     <title>«Основы HTML, CSS и Git»</title>
 </head>
 <body>
-<h1 lang="ru">«Основы HTML, CSS и Git»</h1>
+<h1 lang="ru">«HTML, CSS and Git basics»</h1>
 
 <table>
     <tr>
@@ -24,81 +24,82 @@
                 <li>A little knowledge of Photoshop, the initial level of HTML and Javascript.</li>
 
                 <li> My little practice on JavaScript:</li>
-                <code> $(function () {</br>
-                    var uds = '';</br>
-                    var $listItems = $('li');</br>
-                    var $headItems = $('ul');</br>
-                    </br>
-                    $('ul').on('click', function () {</br>
-                    uds = this.class;</br>
-                    $headItems.append('&ltp&gt' + 'Список обновлен!' + '&lt/p&gt');</br>
-                    $(uds).children('ul').remove();</br>
-                    });</br>
-                    </br>
-                    $('li').on('click', function () {</br>
-                    $listItems.after('&lta&gt' + ' без ГМО' + '&lt/a&gt');</br>
-                    $('li').find('a').remove();</br>
-                    });</br>
-                    </br>
-                    $listItems.on('mouseout', function () {</br>
-                    $('a').remove();</br>
-                    });</br>
-                    </br>
-                    $headItems.on('mouseout', function () {</br>
-                    $(this).children('p').remove();</br>
-                    });</br>
-                    /*анимация*/</br>
-                    $(function () {</br>
-                    $('ul').hide().slideToggle();</br>
-                    var $Li = $('li');</br>
-                    $Li.hide().each(function (index) {</br>
-                    $(this).delay(200 * index).fadeIn(100);</br>
-                    });</br>
-                    });</br>
-                    </br>
-                    $(function () {</br>
-                    $('li').on('mouseover', function () {</br>
-                    $(this).animate({</br>
-                    fontSize: '34',</br>
-                    fontFamily: 'Arial',</br>
-                    }, 250);</br>
-                    });</br>
-                    });</br>
-                    $(function () {</br>
-                    $('li').on('mouseout', function () {</br>
-                    $(this).animate({</br>
-                    fontSize: '25',</br>
-                    }, 500);</br>
-                    });</br>
-                    });</br>
-                    </br>
-                    /*работа с добавлением формы*/</br>
-                    $(function () {</br>
-                    var $newItemBut = $('#newItemButton');</br>
-                    var $newItemForm = $('#newItemForm');</br>
-                    var $textInput = $('input:text');</br>
-                    </br>
-                    $newItemBut.show();</br>
-                    $newItemForm.hide();</br>
-                    </br>
-                    $('#showForm').on('click', function () {</br>
-                    $newItemBut.hide();</br>
-                    $newItemForm.show();</br>
-                    });</br>
-                    </br>
-                    $newItemForm.on('submit', function (e) {</br>
-                    e.preventDefault();</br>
-                    var newText = $textInput.val();</br>
-                    $('li:last').after('
-                    &ltli&gt' + newText + '&ltli&gt
-                    ');</br>
-                    $newItemForm.hide();</br>
-                    $newItemBut.show();</br>
-                    $textInput.val('');</br>
-                    });</br>
-                    });</br>
-                    });</br>
-                </code>
+                <pre>
+$(function () {
+    var uds = '';
+    var $listItems = $('li');
+    var $headItems = $('ul');
+
+
+    $('ul').on('click', function () {
+        uds = this.class;
+        $headItems.append('&ltp&gt' + 'Список обновлен!' + '&lt/p&gt');
+        $(uds).children('ul').remove();
+    });
+
+    $('li').on('click', function () {
+        $listItems.after('&lta&gt' + ' без ГМО' + '&lt/a&gt');
+        $('li').find('a').remove();
+    });
+
+    $listItems.on('mouseout', function () {
+        $('a').remove();
+    });
+
+    $headItems.on('mouseout', function () {
+        $(this).children('p').remove();
+    });
+    /*анимация*/
+    $(function () {
+        $('ul').hide().slideToggle();
+        var $Li = $('li');
+        $Li.hide().each(function (index) {
+            $(this).delay(200 * index).fadeIn(100);
+        });
+    });
+
+    $(function () {
+        $('li').on('mouseover', function () {
+            $(this).animate({
+                fontSize: '34',
+                fontFamily: 'Arial',
+            }, 250);
+        });
+    });
+    $(function () {
+        $('li').on('mouseout', function () {
+            $(this).animate({
+                fontSize: '25',
+            }, 500);
+        });
+    });
+
+    /*работа с добавлением формы*/
+    $(function () {
+        var $newItemBut = $('#newItemButton');
+        var $newItemForm = $('#newItemForm');
+        var $textInput = $('input:text');
+
+        $newItemBut.show();
+        $newItemForm.hide();
+
+        $('#showForm').on('click', function () {
+            $newItemBut.hide();
+            $newItemForm.show();
+        });
+
+        $newItemForm.on('submit', function (e) {
+            e.preventDefault();
+            var newText = $textInput.val();
+            $('li:last').after('&ltli&gt' + newText + '&lt/li&gt');
+            $newItemForm.hide();
+            $newItemBut.show();
+            $textInput.val('');
+        });
+        /*завершающая строка*/
+    });
+});
+                </pre>
 
                 <li> No experience.</li>
 
@@ -107,7 +108,9 @@
                 <li>Intermediate (can translate some texts and spoken language with vocabulary)</li>
             </ol>
         </th>
-        <td>123</td>
+        <td id="image"><img src="image_1.jpg" alt="Abramov Konstantin"> <br>
+            <p>Abramov Konstantin</p>
+        </td>
     </tr>
 </table>
 

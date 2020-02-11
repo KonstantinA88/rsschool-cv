@@ -1,5 +1,5 @@
 h1 {
-    font-family: Arial;
+    font-family: Arial, serif;
     font-size: 30px;
     text-align: center;
 }
@@ -13,24 +13,37 @@ body {
 li {
     line-height: 24px;
     font-size: 14px;
-    font-family: Arial;
+    font-family: Arial, serif;
     font-weight: bold;
 }
 
 th {
     text-align: left;
-    background-color: #bcba9a;
+    background-color: lightgrey;
     height: 1514px;
     width: 504px;
 }
 
 td {
     text-align: left;
-    background-color: #bcba9a;
+    background-color: lightgrey;
     height: 1514px;
     width: 504px;
 }
 
 table {
     text-align: center;
+}
+
+#image {
+    vertical-align: top;
+    text-align: center;
+
+}
+img {
+    border: 3px solid darkgray;
+}
+
+p {
+    margin: -4px;
 }
